@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-link to="/home">Home</router-link>
+    <router-link to="/about">About</router-link>
+    <router-link to="/AdministrativeRegion">行政区带高程切换</router-link>
+    <router-link to="/AdministrativeRegion_province">市县带高程切换</router-link>
+    <router-view></router-view> <!-- 路由视图占位符 -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import AboutPage from './components/AboutPage.vue'
+// import HomePage from './components/HomePage.vue'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  // components: {
+  //   AboutPage,
+  //   HomePage
+  // }
 }
 </script>
 
@@ -23,6 +27,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: -11px; 
+}
+a{
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 0px 10px 10px 0; /* 调整顶部间距 */
+  text-decoration: none;
+  color: #2c3e50;
 }
 </style>
